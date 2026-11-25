@@ -2,7 +2,7 @@
 
 A responsive travel discovery website built with React and JavaScript that allows users to explore beautiful destinations across India, search for places, filter destinations, and save their favourites.
 
-## [Open Wanderly – Live Website] (https://rishikathallapally.github.io/travel-explorer/)
+## [Open Wanderly – Live Website](https://rishikathallapally.github.io/travel-explorer/)
 ---
 
 ## 📖 Description
