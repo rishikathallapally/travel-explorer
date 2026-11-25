@@ -107,7 +107,7 @@ function App() {
   // Save favourites whenever they change
   useEffect(() => {
   try {
-    localStorage.setItem('travel-favorites', JSON.stringify(favorites))
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites))
   } catch (error) {
     console.error('Unable to save favorites:', error)
   }
@@ -123,22 +123,67 @@ function App() {
     triggerRef.current = null
   }
 }, [selectedDestination])
+
   // Close destination popup using Escape key
   useEffect(() => {
-    if (!selectedDestination) return
+  if (!selectedDestination) return
 
-    function handleEscape(event) {
-      if (event.key === 'Escape') {
-        setSelectedDestination(null)
-      }
+  function handleModalKeyDown(event) {
+    // Close the modal when Escape is pressed
+    if (event.key === 'Escape') {
+      setSelectedDestination(null)
+      return
     }
 
-    window.addEventListener('keydown', handleEscape)
+    // Keep keyboard focus inside the modal
+    if (event.key !== 'Tab') return
 
-    return () => {
-      window.removeEventListener('keydown', handleEscape)
+    const focusableElements = modalRef.current?.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )
+
+    if (!focusableElements?.length) {
+      event.preventDefault()
+      modalRef.current?.focus()
+      return
     }
-  }, [selectedDestination])
+
+    const firstElement = focusableElements[0]
+    const lastElement = focusableElements[focusableElements.length - 1]
+
+    if (document.activeElement === modalRef.current) {
+      event.preventDefault()
+      ;(event.shiftKey ? lastElement : firstElement).focus()
+      return
+    }
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault()
+      lastElement.focus()
+    } else if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault()
+      firstElement.focus()
+    }
+  }
+
+  window.addEventListener('keydown', handleModalKeyDown)
+
+  return () => {
+    window.removeEventListener('keydown', handleModalKeyDown)
+  }
+}, [selectedDestination])
+
+  useEffect(() => {
+  if (!selectedDestination) return
+
+  const previousOverflow = document.body.style.overflow
+
+  document.body.style.overflow = 'hidden'
+
+  return () => {
+    document.body.style.overflow = previousOverflow
+  }
+}, [selectedDestination])
 
   // Add or remove a destination from favourites
   function toggleFavorite(name) {
@@ -263,6 +308,7 @@ function App() {
 
             <div
               className="category-filters"
+              role="group"
               aria-label="Filter by category"
             >
               {categories.map((item) => (
@@ -349,7 +395,7 @@ function App() {
 
           {/* EMPTY SEARCH / FAVOURITES MESSAGE */}
           {filteredDestinations.length === 0 && (
-            <p className="empty-message">
+            <p className="empty-message" role="status">
               {showFavorites && favorites.length === 0
                 ? 'You have not saved any destinations yet. Tap the heart on a destination to add it!'
                 : 'No destinations found. Try another search or category!'}
