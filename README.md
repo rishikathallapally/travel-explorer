@@ -163,14 +163,6 @@ To contribute:
 
 ---
 
-## 🙌 Acknowledgments
-
-- React documentation for learning component-based development.
-- Vite documentation for project setup and production builds.
-- The open-source developer community for learning resources and guidance.
-
----
-
 ## 👩‍💻 Author
 
 **Rishika Thallapally**
