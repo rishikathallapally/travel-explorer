@@ -1,57 +1,55 @@
 # 🌿 Wanderly – Travel Explorer
 
-A responsive travel discovery website built with React and JavaScript that allows users to explore beautiful destinations across India, search for places, filter destinations, and save their favourites.
+A responsive travel discovery website built with **React and JavaScript**, designed to help users explore beautiful destinations across India, discover places through search and category filters, and save their favourite destinations.
 
-## [Open Wanderly – Live Website](https://rishikathallapally.github.io/travel-explorer/)
----
+## 🔗 Project Links
 
-## 📖 Description
+- **Live Demo:** [Wanderly – Travel Explorer](https://rishikathallapally.github.io/travel-explorer/)
+- **GitHub Repository:** [View Source Code](https://github.com/rishikathallapally/travel-explorer)
 
-Wanderly is a frontend web application designed to make discovering travel destinations simple and enjoyable.
+## 📌 Project Overview
 
-Users can explore eight destinations across India, search by destination name or state, filter places by category, save favourite destinations, and view detailed information through an interactive modal.
+Wanderly is a frontend travel exploration application featuring a curated collection of destinations across India. It provides an interactive browsing experience with destination search, category-based filtering, and a favourites feature.
 
-The project focuses on responsive user interface development, interactive functionality, accessibility, and a smooth browsing experience.
+The application focuses on responsive design, reusable React components, interactive user interfaces, and accessible navigation.
 
-### ✨ Features
+## ✨ Features
 
-- Browse eight destinations across India.
-- Search destinations by name and state.
-- Filter destinations by Beach, Nature, Culture, and Heritage.
-- Add and remove destinations from favourites.
-- Save favourite destinations using browser localStorage.
-- View destination information in an interactive modal.
-- Navigate interactive elements using the keyboard.
-- Close the modal using the Escape key.
-- Responsive layouts for mobile, tablet, and desktop.
-- Lazy loading for destination images.
-- Reduced-motion support.
-
----
+- **Destination Exploration:** Browse a collection of 8 popular destinations across India.
+- **Search Functionality:** Search destinations by name or state.
+- **Category Filtering:** Filter destinations by Beach, Nature, Culture, and Heritage.
+- **Favourites:** Add or remove destinations from favourites.
+- **Persistent Storage:** Save favourite destinations using browser localStorage.
+- **Destination Details:** View additional information through an interactive modal.
+- **Keyboard Accessibility:** Navigate interactive elements using the keyboard, close the modal with Escape, and move focus appropriately.
+- **Responsive Layout:** Optimized layouts for mobile, tablet, and desktop screens.
+- **Lazy Loading:** Improve image loading performance.
+- **Empty States:** Display helpful messages when no destinations match the selected filters.
 
 ## 🛠️ Technologies Used
 
-- **React** – Building reusable user interface components.
-- **JavaScript (ES6+)** – Application logic and interactivity.
-- **HTML5** – Semantic page structure.
-- **CSS3** – Styling, layouts, and responsive design.
-- **Vite** – Development server and production build.
-- **localStorage** – Saving favourite destinations in the browser.
-- **Git & GitHub** – Version control and source code management.
-
----
+| Technology | Purpose |
+|---|---|
+| React | Building reusable UI components |
+| JavaScript (ES6+) | Application logic and interactivity |
+| HTML5 | Semantic page structure |
+| CSS3 | Styling and responsive layouts |
+| Vite | Development server and build tool |
+| localStorage | Persistent favourites storage |
+| Git & GitHub | Version control and source code management |
+| GitHub Pages | Website deployment |
 
 ## 🚀 Getting Started
 
-Follow these instructions to set up and run the project locally.
+Follow these instructions to run the project locally.
 
 ### Prerequisites
 
 Make sure you have the following installed:
 
-- Node.js (version 18 or later)
-- npm
-- Git
+- [Node.js](https://nodejs.org/)
+- npm (included with Node.js)
+- [Git](https://git-scm.com/)
 
 ### Installation
 
@@ -79,25 +77,15 @@ npm install
 npm run dev
 ```
 
-Open the local URL displayed in your terminal to view Wanderly in your browser.
+**5. Open the local URL**
 
----
+Open the URL displayed in your terminal, usually:
 
-## ▶️ Usage
+```text
+http://localhost:5173/
+```
 
-Once the application is running:
-
-1. Browse the available travel destinations.
-2. Use the search bar to find destinations by name or state.
-3. Select a category to filter destinations.
-4. Click the favourite icon to save or remove a destination.
-5. Use the favourites filter to view saved destinations.
-6. Select a destination card to view its details.
-7. Close the details modal using the close button or Escape key.
-
----
-
-## 📂 Folder Structure
+## 📂 Project Structure
 
 ```text
 travel-explorer/
@@ -118,57 +106,62 @@ travel-explorer/
 └── README.md
 ```
 
----
-
 ## 📱 Responsive Design
 
-Wanderly is designed to work across different screen sizes.
+Wanderly is designed to provide a consistent browsing experience across different screen sizes.
 
-The layout was checked at:
+The layout was checked at the following viewport widths:
 
-- Mobile: 320px
-- Tablet: 768px
-- Laptop: 1024px
-- Desktop: 1440px
-
----
+- 320px – Small mobile devices
+- 375px – Standard mobile devices
+- 768px – Tablets
+- 1024px – Small desktops and laptops
+- 1440px – Large desktop screens
 
 ## ♿ Accessibility
 
 Accessibility considerations include:
 
 - Semantic HTML elements.
-- Accessible labels for interactive controls.
-- Visible keyboard focus indicators.
-- Keyboard navigation support.
-- Modal focus management and focus restoration.
+- Keyboard-accessible interactive elements.
+- Visible focus management.
+- Accessible modal interactions.
 - Escape key support for closing the modal.
 - Reduced-motion preferences.
+- Appropriate accessible labels for interactive controls.
 
----
+## 📦 Build for Production
 
-## 🤝 Contributing
+To create an optimized production build, run:
 
-This project was created as a personal frontend development project.
+```bash
+npm run build
+```
 
-Suggestions and improvements are welcome.
+To preview the production build locally, run:
 
-To contribute:
+```bash
+npm run preview
+```
 
-1. Fork the repository.
-2. Create a new feature branch.
-3. Make your changes.
-4. Commit your changes.
-5. Submit a pull request describing your improvements.
+## 🌐 Deployment
 
----
+The application is deployed using **GitHub Pages**.
+
+The project uses Vite's base path configuration and the `gh-pages` package for deployment.
+
+To deploy the latest version, run:
+
+```bash
+npm run deploy
+```
 
 ## 👩‍💻 Author
 
 **Rishika Thallapally**
 
-GitHub: [rishikathallapally](https://github.com/rishikathallapally)
+- GitHub: [@rishikathallapally](https://github.com/rishikathallapally)
 
 ---
 
-**Wanderly – Explore. Discover. Experience.**
+⭐ If you find this project interesting, feel free to explore the live website and source code!
