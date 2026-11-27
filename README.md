@@ -164,4 +164,3 @@ npm run deploy
 
 ---
 
-⭐ If you find this project interesting, feel free to explore the live website and source code!
