@@ -40,6 +40,60 @@ The main goal of this project was to practice React, JavaScript, CSS, and buildi
 | Git & GitHub | To manage and store the project code |
 | GitHub Pages | To publish the website online |
 
+## 📁 Project Structure
+
+```text
+travel-explorer/
+│
+├── public/
+│   ├── favicon.svg
+│
+├── src/
+│   ├── assets/
+│   │   ├── goa.jpg
+│   │   ├── hampi.jpg
+│   │   ├── hero-bg.jpg
+│   │   ├── hero.png
+│   │   ├── jaipur.jpg
+│   │   ├── ladakh.jpg
+│   │   ├── meghalaya.jpg
+│   │   ├── munnar.jpg
+│   │   ├── tajmahal.jpg
+│   │   └── varanasi.jpg
+│   │
+│   ├── components/
+│   │   ├── TravelJournal.jsx
+│   │   ├── TravelJournal.css
+│   │   ├── TravelMap.jsx
+│   │   └── TravelMap.css
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── eslint.config.js
+├── vite.config.js
+└── README.md
+```
+
+### 📌 Main Files and Folders
+
+| File / Folder | Purpose |
+|---|---|
+| `public/` | Stores public assets such as icons. |
+| `src/assets/` | Contains destination images and other image assets. |
+| `src/components/` | Contains reusable components for the travel map and journal. |
+| `App.jsx` | Contains the main application and its features. |
+| `App.css` | Contains the main website styling. |
+| `index.css` | Contains the global CSS entry file. |
+| `main.jsx` | Starts the React application. |
+| `index.html` | The main HTML page loaded by the browser. |
+| `package.json` | Contains project information, dependencies, and scripts
+
 ## 🚀 How to Run the Project
 
 Follow these steps to run Wanderly on your computer.
