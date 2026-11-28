@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef, useLayoutEffect } from 'react'
 import './App.css'
 import TravelMap from './components/TravelMap'
@@ -886,10 +885,46 @@ function App() {
               <div className="activity-list">
                 {itinerary.map((activity) => (
                   <div className="activity-item" key={activity.id}>
-                    <div>
-                      <span>{activity.destination}</span>
-                      <h4>{activity.name}</h4>
-                    </div>
+                    
+                  <div className="activity-details">
+                    <span>{activity.destination}</span>
+
+                    {activity.name
+                      .split(/(?=Day\s+\d+\s*[–—-])/i)
+                      .map((dayText, dayIndex) => {
+                        const firstTimeIndex = dayText.search(
+                          /\b\d{1,2}:\d{2}\s*(AM|PM)\b/i
+                        )
+
+                        const dayHeading =
+                          firstTimeIndex === -1
+                            ? dayText.trim()
+                            : dayText
+                                .slice(0, firstTimeIndex)
+                                .replace(/\s*[-–—]\s*$/, '')
+                                .trim()
+
+                        const activities =
+                          firstTimeIndex === -1
+                            ? []
+                            : dayText
+                                .slice(firstTimeIndex)
+                                .split(/(?=\b\d{1,2}:\d{2}\s*(?:AM|PM)\b)/i)
+                                .map((item) => item.trim())
+                                .filter(Boolean)
+
+                        return (
+                          <div className="activity-day" key={`${activity.id}-${dayIndex}`}>
+                            <h4>{dayHeading}</h4>
+
+                            {activities.map((item, index) => (
+                            <p key={index}>{item}</p>
+                            ))}
+                          </div>
+                        )
+                    })}
+                  </div>
+
 
                     <button
                       type="button"

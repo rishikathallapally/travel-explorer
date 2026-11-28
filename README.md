@@ -1,57 +1,56 @@
-# 🌿 Wanderly – Travel Explorer
+# ✈️ Wanderly – Travel Explorer
 
-A responsive travel discovery website built with **React and JavaScript**, designed to help users explore beautiful destinations across India, discover places through search and category filters, and save their favourite destinations.
+A travel discovery and trip-planning website built using **React**. Wanderly helps users explore beautiful destinations across India, save their favorite places, and plan their trips.
 
-## 🔗 Project Links
+🔗 **Live Demo:** [Explore Wanderly](https://rishikathallapally.github.io/travel-explorer/)  
+💻 **GitHub Repository:** [View Source Code](https://github.com/rishikathallapally/travel-explorer)
 
-- **Live Demo:** [Wanderly – Travel Explorer](https://rishikathallapally.github.io/travel-explorer/)
-- **GitHub Repository:** [View Source Code](https://github.com/rishikathallapally/travel-explorer)
+---
 
-## 📌 Project Overview
+## 🌍 About the Project
 
-Wanderly is a frontend travel exploration application featuring a curated collection of destinations across India. It provides an interactive browsing experience with destination search, category-based filtering, and a favourites feature.
+Wanderly is a frontend web application where users can explore destinations across India and organize their travel plans.
 
-The application focuses on responsive design, reusable React components, interactive user interfaces, and accessible navigation.
+Users can search for destinations, filter places by category, save favorites, plan activities, view destinations on a map, and write personal travel journal entries.
+
+The main goal of this project was to practice React, JavaScript, CSS, and building an interactive, responsive website.
 
 ## ✨ Features
 
-- **Destination Exploration:** Browse a collection of 8 popular destinations across India.
-- **Search Functionality:** Search destinations by name or state.
-- **Category Filtering:** Filter destinations by Beach, Nature, Culture, and Heritage.
-- **Favourites:** Add or remove destinations from favourites.
-- **Persistent Storage:** Save favourite destinations using browser localStorage.
-- **Destination Details:** View additional information through an interactive modal.
-- **Keyboard Accessibility:** Navigate interactive elements using the keyboard, close the modal with Escape, and move focus appropriately.
-- **Responsive Layout:** Optimized layouts for mobile, tablet, and desktop screens.
-- **Lazy Loading:** Improve image loading performance.
-- **Empty States:** Display helpful messages when no destinations match the selected filters.
+- **Explore Destinations:** Browse different travel destinations across India.
+- **Search & Filter:** Search for places and filter them by category, such as beaches, nature, culture, and heritage.
+- **Favorites:** Save favorite destinations and view them whenever needed.
+- **Trip Planner:** Add activities to a travel plan and organize them by day and time.
+- **Travel Map:** View destination locations on an interactive map.
+- **Travel Journal:** Add, edit, and delete personal travel entries.
+- **Responsive Design:** Use the website comfortably on mobile, tablet, and desktop screens.
+- **Data Storage:** Save favorites, trip plans, and journal entries using browser `localStorage`.
 
 ## 🛠️ Technologies Used
 
-| Technology | Purpose |
+| Technology | How I Used It |
 |---|---|
-| React | Building reusable UI components |
-| JavaScript (ES6+) | Application logic and interactivity |
-| HTML5 | Semantic page structure |
-| CSS3 | Styling and responsive layouts |
-| Vite | Development server and build tool |
-| localStorage | Persistent favourites storage |
-| Git & GitHub | Version control and source code management |
-| GitHub Pages | Website deployment |
+| HTML5 | To structure the website |
+| CSS3 | To design the pages and make them responsive |
+| JavaScript (ES6+) | To add functionality and interactions |
+| React | To build the user interface |
+| Vite | To set up and run the React project |
+| Leaflet | To display the interactive travel map |
+| localStorage | To save user data in the browser |
+| Git & GitHub | To manage and store the project code |
+| GitHub Pages | To publish the website online |
 
-## 🚀 Getting Started
+## 🚀 How to Run the Project
 
-Follow these instructions to run the project locally.
+Follow these steps to run Wanderly on your computer.
 
-### Prerequisites
+### Requirements
 
-Make sure you have the following installed:
+- Node.js
+- npm
+- Git
 
-- [Node.js](https://nodejs.org/)
-- npm (included with Node.js)
-- [Git](https://git-scm.com/)
-
-### Installation
+### Installation Steps
 
 **1. Clone the repository**
 
@@ -59,13 +58,13 @@ Make sure you have the following installed:
 git clone https://github.com/rishikathallapally/travel-explorer.git
 ```
 
-**2. Navigate to the project directory**
+**2. Open the project folder**
 
 ```bash
 cd travel-explorer
 ```
 
-**3. Install dependencies**
+**3. Install the required packages**
 
 ```bash
 npm install
@@ -77,90 +76,48 @@ npm install
 npm run dev
 ```
 
-**5. Open the local URL**
+Open the local URL shown in your terminal to view the website.
 
-Open the URL displayed in your terminal, usually:
+## 📜 Available Commands
 
-```text
-http://localhost:5173/
-```
+| Command | What It Does |
+|---|---|
+| `npm run dev` | Runs the website locally |
+| `npm run build` | Creates the production version |
+| `npm run preview` | Previews the production version |
+| `npm run lint` | Checks the code for common issues |
+| `npm run deploy` | Deploys the website to GitHub Pages |
 
-## 📂 Project Structure
+## 📚 What I Learned
 
-```text
-travel-explorer/
-│
-├── public/
-│
-├── src/
-│   ├── assets/
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   └── main.jsx
-│
-├── index.html
-├── package.json
-├── package-lock.json
-├── vite.config.js
-└── README.md
-```
+While building Wanderly, I practiced:
 
-## 📱 Responsive Design
+- Creating reusable components with React.
+- Using JavaScript to handle user interactions.
+- Managing data and updating the user interface.
+- Adding search and category filters.
+- Saving data using `localStorage`.
+- Working with an interactive map using Leaflet.
+- Creating and managing travel journal entries.
+- Designing responsive pages using CSS.
+- Using Git and GitHub to manage project changes.
+- Deploying a React application using GitHub Pages.
 
-Wanderly is designed to provide a consistent browsing experience across different screen sizes.
+## 🔮 Future Improvements
 
-The layout was checked at the following viewport widths:
-
-- 320px – Small mobile devices
-- 375px – Standard mobile devices
-- 768px – Tablets
-- 1024px – Small desktops and laptops
-- 1440px – Large desktop screens
-
-## ♿ Accessibility
-
-Accessibility considerations include:
-
-- Semantic HTML elements.
-- Keyboard-accessible interactive elements.
-- Visible focus management.
-- Accessible modal interactions.
-- Escape key support for closing the modal.
-- Reduced-motion preferences.
-- Appropriate accessible labels for interactive controls.
-
-## 📦 Build for Production
-
-To create an optimized production build, run:
-
-```bash
-npm run build
-```
-
-To preview the production build locally, run:
-
-```bash
-npm run preview
-```
-
-## 🌐 Deployment
-
-The application is deployed using **GitHub Pages**.
-
-The project uses Vite's base path configuration and the `gh-pages` package for deployment.
-
-To deploy the latest version, run:
-
-```bash
-npm run deploy
-```
+- Add more travel destinations.
+- Show weather information for destinations.
+- Improve the trip planner with more scheduling options.
+- Add personalized destination suggestions.
 
 ## 👩‍💻 Author
 
 **Rishika Thallapally**
 
-- GitHub: [@rishikathallapally](https://github.com/rishikathallapally)
+Frontend Development Enthusiast
+
+🔗 [GitHub Profile](https://github.com/rishikathallapally)
 
 ---
 
+⭐ *Built with React, JavaScript, and CSS as a frontend development portfolio project.*
